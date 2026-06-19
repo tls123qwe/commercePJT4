@@ -10,4 +10,16 @@ public class Customer {
         this.email = email;
         this.grade = grade;
     }
+
+    public String getCustomerName() {
+        return customerName;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public String getGrade() {
+        return grade;
+    }
 }

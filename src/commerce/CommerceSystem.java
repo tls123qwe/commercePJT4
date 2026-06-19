@@ -35,14 +35,16 @@ public class CommerceSystem {
             System.out.println("[" + selectedCategory.getCategoryName() + "] 카테고리");
             System.out.println();
 
+            List<Product> choiceProductList = selectedCategory.getProductList();
+
             // 상품 리스트 출력을 위한 반복문
             while (true) {
-                for (int j = 0; j < selectedCategory.getProductList().size(); j++) {
+                for (int j = 0; j < choiceProductList.size(); j++) {
                     System.out.printf("%d. %-12s | %,10d원 | %s%n", // pintf를 사용하여 출력 정규화
                             j + 1,
-                            selectedCategory.getProductList().get(j).getPdName(),
-                            selectedCategory.getProductList().get(j).getPrice(),
-                            selectedCategory.getProductList().get(j).getDescription());
+                            choiceProductList.get(j).getPdName(),
+                            choiceProductList.get(j).getPrice(),
+                            choiceProductList.get(j).getDescription());
                 }
                 System.out.println("0.뒤로가기");
                 System.out.print("상품 선택: ");
